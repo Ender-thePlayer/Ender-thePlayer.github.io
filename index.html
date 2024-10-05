@@ -21,7 +21,8 @@
             height: 100%;
         }
         .header {
-            border: 0.5vw solid #AAAAAA;
+            position: relative;
+            border: 0.5vw solid #e6d8d8;
             box-sizing: border-box;
             overflow: hidden;
             display: flex;
@@ -30,6 +31,27 @@
             flex-wrap: wrap;
             margin: 1vw 1vw 0 1vw;
         }
+        
+        .header::before {
+            content: ""; /* Create a pseudo-element */
+            position: absolute; /* Absolute positioning inside the header */
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("s.webp"); /* Use the same image */
+            background-size: cover;
+            background-position: center;
+            filter: blur(4px); /* Blur effect */
+            z-index: -1; /* Place it behind the content */
+        }
+        
+        .header::after {
+            content: ""; /* Create a dark overlay */
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(34, 34, 34, 0.39); /* Black overlay with 50% opacity */
+            z-index: -1; /* Place it between the content and the blurred image */
+        }
+
+        
         .header img {
             width: 300px;
             margin: 1vw 0 1vw 1vw;
@@ -41,7 +63,7 @@
             margin-bottom: 80px;
         }
         .text-content h1, .text-content h5 {
-            color: #AAAAAA;
+            color: #f5f5f5;
             font-size: 20px;
         }
         .text-content h1 {
@@ -52,7 +74,7 @@
             margin-top: 0;
         }
         .link-content a {
-            color: #737373;
+            color: #e6d8d8;
             font-weight: 700;
             text-decoration: none;
         }
@@ -61,7 +83,7 @@
             clear: both;
         }
         .intro h1, .intro h6, .intro h3, .intro h5{
-            color: #AAAAAA;
+            color: #e6d8d8;
         }
         .intro h1 {
             margin-bottom: 10px;
@@ -102,7 +124,7 @@
             display: none;
         }
         .footer h4{
-            color: #AAAAAA;
+            color: #e6d8d8;
             margin: 2px 5px;
         }
         .footer p, .footer a {
@@ -216,7 +238,7 @@
         <img src="picture.webp">
         <div class="text-content">
             <h1>EnderDatsIts' Scuffed Site</h1>
-            <h5>レイニー、レイニー、ねえレイニーは</h5>
+            <h5>ねえ！ねえ！もっともっと！余はかわ余？(かわ余！)</h5>
             <div class="link-content">
                 <a href="https://github.com/Ender-thePlayer">Github</a>
                 <a style="margin: 0px 10px;" href="https://x.com/ender_datsit">Twitter</a>
@@ -230,23 +252,22 @@
             <br>I only do random shit that I like but I ain't no expert at any of them.
         </h6>
 
-        <h1>My interests</h1>
-        <h3 class="full-text">· Vocaloid, J-Pop and J-Rock</h3>
-        <h3 class="short-text">Vocaloid, J-Pop and J-Rock</h3>
+        <h1>What I like</h1>
+        <h3 class="full-text"> · Vocaloid</h3>
+        <h3 class="short-text">Vocaloid</h3>
         <h5>
-            On March 18, 2022, YouTube introduced me to a genre of music that I quickly became obsessed with through "Lagtrain" by Inabakumori: Vocaloid, and later, J-Pop and J-Rock. I've enjoyed everything Inaba has produced over the years.
-            <br><br>I wanted to create a playlist of all Inaba's songs from the album "ANTICYCLONE" on Spotify, but I accidentally added only "Pascal Beats," which is why the playlist is named that way.
-            <br><br>Around April 2022, I discovered another musician I like, TUYU, through the song "Being Low as Dirt, Taking What's Important from Me" on Spotify. In the autumn of that year, I found another artist I enjoy, Harumakigohan. My appreciation for Harumakigohan's music grew over time, and I eventually bought the album "Futarino".
+            　On March 18, 2022, YouTube introduced me to a genre of music that I quickly became obsessed with through "Lagtrain" by Inabakumori: Vocaloid, and later, J-Pop and J-Rock. I've enjoyed everything Inaba has produced over the years.
+            <br><br>Around April 2022, I discovered another musician I like, TUYU, through the song "Being Low as Dirt, Taking What's Important from Me" on Spotify. In the autumn of that year, I found another artist I enjoy, Harumaki Gohan. My appreciation for his music grew over time, and I eventually bought the album "Futarino".
             <br>Some other artists I like include wowaka, ime44, iyowa, and DECO*27.
             <br><br>My favorite song is "If I Could Become a Comet" by Harumaki Gohan.
             
         </h5>
-        <iframe style="border-radius:2px;" src="https://open.spotify.com/embed/track/2BTJyfpWwvJ8jV7Sp3Zj2v?utm_source=generator" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <h3 class="full-text">· Linux</h3>
+        <iframe style="border-radius:2px;" src="https://open.spotify.com/embed/track/6AiNSP7GMAkIGaqQJiVJ3e?utm_source=generator" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <h3 class="full-text"> · Linux</h3>
         <h3 class="short-text">Linux</h3>
 
         <h6>
-            In January 2021, I began experiencing persistent WiFi issues on my Windows computer. Despite finding temporary fixes, the problems persisted until February when a friend recommended trying Linux, specifically ZorinOS Lite, which he was using at the time. Without a USB stick or DVD, I managed to boot the ISO from my hard drive. I liked ZorinOS after testing it from the live environment, but in an unfortunate attempt to install it, I accidentally erased my Windows system along with the ISO file, leaving me without an operating system.
+            　In January 2021, I began experiencing persistent WiFi issues on my Windows computer. Despite finding temporary fixes, the problems persisted until February when a friend recommended trying Linux, specifically ZorinOS Lite, which he was using at the time. Without a USB stick or DVD, I managed to boot the ISO from my hard drive. I liked ZorinOS after testing it from the live environment, but in an unfortunate attempt to install it, I accidentally erased my Windows system along with the ISO file, leaving me without an operating system.
             <br><br>After a week, I was able to install Xubuntu from an SD card. Using DVDs, I eventually burned a Windows 8.1 DVD and reinstalled Windows, subsequently upgrading to Windows 10 without needing a DVD. However, the appeal of Linux remained strong. A few months later, I successfully installed Linux again, though initially, I had to use USB tethering to get WiFi working. I began dual-booting Windows with ZorinOS but found myself using ZorinOS more frequently, leading me to switch entirely to ZorinOS.
             <br><br>I used ZorinOS for over a year and enjoyed it, but I wanted to try Wayland and found ZorinOS 16's GNOME version kinda outdated for that. This led me to Fedora 38 Workstation, which I loved and used for another year. In April 2024, I decided to try ArchLinux and successfully installed it. I switched from GNOME to Hyprland, which I continue to use and enjoy to this day.
         </h6>
