@@ -1,0 +1,265 @@
+/* Base styles */
+html {
+    font-size: 20px;
+    font-family: Inter, Helvetica, Arial, sans-serif;
+}
+
+/* normal website layout */
+body {
+    background-color: #222222;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.header {
+    position: relative;
+    border: 0.5vw solid #e6d8d8;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin: 1vw 1vw 0 1vw;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("images/background.webp");
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(34, 34, 34, 0.39);
+    z-index: -1;
+}
+
+.header img {
+    width: 300px;
+    margin: 1vw 0 1vw 1vw;
+}
+
+.text-content {
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-right: 3vw;
+    margin-bottom: 80px;
+}
+
+.text-content h1, .text-content h5 {
+    color: #f5f5f5;
+    font-size: 20px;
+}
+
+.text-content h1 {
+    margin-bottom: 0.5vw;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.text-content h5 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.link-content a {
+    color: #e6d8d8;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.intro {
+    margin: 50px 2.5vw 0 2.5vw;
+    clear: both;
+}
+
+.intro h1, .intro h6, .intro h3, .intro h5 {
+    color: #e6d8d8;
+}
+
+.intro h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.intro h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.intro h6 {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.intro h5 {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.intro iframe {
+    margin-bottom: 35px;
+    width: 70%;
+    max-width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro img {
+    margin-bottom: 35px;
+    width: 70%;
+    max-width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.tf_im_doing_with_my_life {
+    float: left;
+    margin-bottom: 35px;
+    width: 34%;
+    max-width: 34%;
+    display: block;
+}
+
+.short-text {
+    display: none;
+}
+
+.footer h4 {
+    color: #e6d8d8;
+    margin: 2px 5px;
+}
+
+.footer p, .footer a {
+    color: #222222;
+    margin: 0 0 0 5px;
+}
+
+.rick {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.rick p {
+    padding-left: 2%
+}
+
+.clear {
+    clear: both;
+}
+
+/* Responsive Design */
+@media (max-width: 1051px) {
+    .text-content h1 {
+        font-size: 40px;
+    }
+    .text-content h5 {
+        font-size: 20px;                
+    }
+}
+
+@media (max-width: 913px) {
+    .text-content {
+        margin-left: 20px;
+        margin-right: 2vw;
+    }
+    .text-content h1 {
+        font-size: 35px;
+    }
+    .text-content h5 {
+        font-size: 20px;                
+    }
+}
+
+@media (max-width: 815px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header img {
+        width: 40%;
+        margin: 3vw 0 0 0;
+    }
+    .text-content {
+        margin: 0 0 5vw 0;
+        text-align: center;
+    }
+    .text-content h1 {
+        margin-bottom: 0.5vw;
+        font-size: 40px;
+    }
+    .link-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .intro {
+        text-align: center;
+    }
+    .intro iframe {
+        margin-bottom: 35px;
+        width: 95%;
+        max-width: 95%;
+    }
+    .intro img {
+        margin-bottom: 35px;
+        width: 95%;
+        max-width: 95%;
+    }
+    img.tf_im_doing_with_my_life {
+        float: none;
+        margin-top: -20px;
+        width: 35%;
+        max-width: 35%;
+        display: block;
+    }
+    .short-text {
+        display: inline-block;
+    }
+    .full-text {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header img {
+        width: 40%;
+        margin: 5vw 0 0 0;
+    }
+    img.tf_im_doing_with_my_life {
+        float: none;
+        margin-top: -20px;
+        width: 60%;
+        max-width: 60%;
+        display: block;
+    }
+    .text-content {
+        margin: 0 0 5vw 0;
+        text-align: center;
+    }
+    .text-content h1 {
+        margin-bottom: 0.5vw;
+        font-size: 40px;
+    }
+} 
