@@ -102,7 +102,7 @@ body {
 .intro h6 {
     margin-top: 10px;
     font-size: 20px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .intro h5 {
@@ -134,6 +134,14 @@ img.tf_im_doing_with_my_life {
     margin-bottom: 35px;
     width: 34%;
     max-width: 34%;
+    display: block;
+}
+
+img.tf_im_doing_with_my_life_the_second {
+    float: left;
+    margin-bottom: 35px;
+    width: 24%;
+    max-width: 24%;
     display: block;
 }
 
@@ -230,11 +238,21 @@ img.tf_im_doing_with_my_life {
         max-width: 35%;
         display: block;
     }
+    img.tf_im_doing_with_my_life_the_second {
+        float: none;
+        margin-top: -20px;
+        width: 25%;
+        max-width: 25%;
+        display: block;
+    }
     .short-text {
         display: inline-block;
     }
     .full-text {
         display: none;
+    }
+    .footer {
+        text-align: center;
     }
 }
 
@@ -254,6 +272,13 @@ img.tf_im_doing_with_my_life {
         max-width: 60%;
         display: block;
     }
+    img.tf_im_doing_with_my_life_the_second {
+        float: none;
+        margin-top: -20px;
+        width: 60%;
+        max-width: 60%;
+        display: block;
+    }
     .text-content {
         margin: 0 0 5vw 0;
         text-align: center;
@@ -261,5 +286,8 @@ img.tf_im_doing_with_my_life {
     .text-content h1 {
         margin-bottom: 0.5vw;
         font-size: 40px;
+    }
+    .footer {
+        text-align: center;
     }
 } 
